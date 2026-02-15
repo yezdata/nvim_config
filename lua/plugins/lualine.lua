@@ -8,7 +8,8 @@ return {
     config = function()
         require("lualine").setup({
             options = {
-                theme = "ayu_dark",
+                -- theme = "ayu_dark",
+                theme = 'tokyonight-night',
                 -- section_separators = { left = "", right = "" },
                 section_separators = "",
                 component_separators = "|",
@@ -34,16 +35,16 @@ return {
                     },
                 },
                 lualine_x = {
-                --     {
-                --         require("noice").api.statusline.mode.get,
-                --         cond = require("noice").api.statusline.mode.has,
-                --         color = { fg = "#ff9e64" },
-                --     },
-                --     {
-                --         require("noice").api.status.command.get,
-                --         cond = require("noice").api.status.command.has,
-                --         color = { fg = "#719cd6" },
-                --     },
+                    --     {
+                    --         require("noice").api.statusline.mode.get,
+                    --         cond = require("noice").api.statusline.mode.has,
+                    --         color = { fg = "#ff9e64" },
+                    --     },
+                    --     {
+                    --         require("noice").api.status.command.get,
+                    --         cond = require("noice").api.status.command.has,
+                    --         color = { fg = "#719cd6" },
+                    --     },
                     -- {
                     --     "copilot",
                     --     show_colors = true,
