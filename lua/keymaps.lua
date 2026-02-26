@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { silent = true })
 
 vim.api.nvim_set_keymap("n", '<C-w>"', ":split<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-w>%", ":vsplit<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = true, silent = true })
 
 -- -- LSP
 -- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
