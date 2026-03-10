@@ -6,11 +6,11 @@ return {
         local fzf = require("fzf-lua")
         fzf.setup({
             files = {
-                cmd = "fd --type f --hidden --follow --exclude .DS_Store --exclude .git --exclude .venv --exclude __pycache__",
+                cmd = "fd --type f --hidden --follow --exclude .DS_Store --exclude .git --exclude .venv --exclude __pycache__ --exclude *.egg-info",
             },
             grep = {
                 rg_opts =
-                "--column --line-number --no-heading --color=always --smart-case --max-columns=4096 --hidden --glob '!.git/' --glob '!.DS_Store' --glob '!.venv' --e",
+                "--column --line-number --no-heading --color=always --smart-case --max-columns=4096 --hidden --glob '!.git/' --glob '!.DS_Store' --glob '!.venv' --glob '!*.egg-info' --e",
             },
             keymap = {
                 fzf = {
