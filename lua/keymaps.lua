@@ -37,10 +37,10 @@ vim.keymap.set("n", "<C-n>", minifiles_toggle, { noremap = true, silent = true }
 
 
 -- Pohyb mezi okny v Normal i Visual módu
-vim.keymap.set({'n', 'v'}, '<C-h>', '<C-w>h', { desc = 'Pohyb doleva' })
-vim.keymap.set({'n', 'v'}, '<C-j>', '<C-w>j', { desc = 'Pohyb dolů' })
-vim.keymap.set({'n', 'v'}, '<C-k>', '<C-w>k', { desc = 'Pohyb nahoru' })
-vim.keymap.set({'n', 'v'}, '<C-l>', '<C-w>l', { desc = 'Pohyb doprava' })
+-- vim.keymap.set({'n', 'v'}, '<C-h>', '<C-w>h', { desc = 'Pohyb doleva' })
+-- vim.keymap.set({'n', 'v'}, '<C-j>', '<C-w>j', { desc = 'Pohyb dolů' })
+-- vim.keymap.set({'n', 'v'}, '<C-k>', '<C-w>k', { desc = 'Pohyb nahoru' })
+-- vim.keymap.set({'n', 'v'}, '<C-l>', '<C-w>l', { desc = 'Pohyb doprava' })
 
 
 -- vim.keymap.set({ "n", "v" }, "<leader>gh", "<cmd>CopilotChat<cr><esc>")
