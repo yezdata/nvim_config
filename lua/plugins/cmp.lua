@@ -1,11 +1,11 @@
 return {
   {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter", -- Načte se až když začnete psát (optimalizace startu)
+    event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer", -- Nová závislost
-      "hrsh7th/cmp-path",   -- Nová závislost
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
     },
@@ -20,7 +20,7 @@ return {
           end,
         },
         window = {
-          completion = cmp.config.window.bordered(), -- Volitelné: hezčí okraje
+          completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
@@ -33,10 +33,18 @@ return {
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
-          { name = "luasnip" }, -- Snippety
-          { name = "path" },    -- Cesty k souborům
-        }, {
-          { name = "buffer" },  -- Slova z aktuálního souboru (jako záloha)
+          {
+            name = "path",
+            option = {
+              trailing_slash = true,
+              label_trailing_slash = true,
+              get_cwd = function()
+                return vim.fn.getcwd()
+              end,
+            },
+          },
+          { name = "luasnip" },
+          { name = "buffer" },
         }),
       })
     end,
